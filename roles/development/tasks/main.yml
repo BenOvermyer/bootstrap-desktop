@@ -1,22 +1,9 @@
 ---
+- name: Docker
+  import_tasks: docker.yml
 
-- name: Install Docker apt key
-  apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    state: present
+- name: IDEs
+  import_tasks: ide.yml
 
-- name: Add Docker apt repository
-  apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic edge
-    state: present
-
-- name: Install Docker
-  apt:
-    name: docker-ce
-    state: present
-    update_cache: True
-
-- name: Make sure docker-compose is there too
-  apt:
-    name: docker-compose
-    state: present
+- name: Node.js
+  import_tasks: nodejs.yml

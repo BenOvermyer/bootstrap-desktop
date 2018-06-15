@@ -1,0 +1,28 @@
+---
+- name: Install VS Code key
+  apt_key:
+    url: 'https://packages.microsoft.com/keys/microsoft.asc'
+    state: present
+
+- name: Install VS Code repo
+  apt_repository:
+    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+    state: present
+
+- name: Install VS Code
+  apt:
+    name: code
+    state: present
+    update_cache: True
+
+- name: Add neovim apt repository
+  apt_repository:
+    repo: ppa:neovim-ppa/stable
+    state: present
+
+- name: Install neovim
+  apt:
+    name: neovim
+    state: present
+    update_cache: True
+    
