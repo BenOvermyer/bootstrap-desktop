@@ -23,7 +23,7 @@
   import_tasks: chrome.yml
 
 - name: Install Slack
-  shell: snap install slack
+  shell: snap install slack --classic
 
 - name: Install WordPress Desktop
   shell: snap install wordpress-desktop

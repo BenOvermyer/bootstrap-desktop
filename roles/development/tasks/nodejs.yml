@@ -1,22 +1,12 @@
 ---
-- name: Add Node.js signing key
-  apt_key:
-    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-    state: present
-
-- name: Add the Node.js repository
-  apt_repository:
-    repo: "{{ item }}"
-    state: present
-  with_items:
-    - deb https://deb.nodesource.com/ubuntu bionic main
-    - deb-src https://deb.nodesource.com/ubuntu bionic main
-
 - name: Install Node.js
   apt:
-    name: nodejs
+    name: "{{ item }}"
     state: present
     update_cache: True
+  with_items:
+    - nodejs
+    - npm
 
 - name: Add Yarn key
   apt_key:

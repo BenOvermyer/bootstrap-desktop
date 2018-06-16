@@ -6,7 +6,8 @@
 
 - name: Download Iosevka
   unarchive:
-    url: https://github.com/be5invis/Iosevka/releases/download/v1.14.3/01-iosevka-1.14.3.zip
+    remote_src: True
+    src: https://github.com/be5invis/Iosevka/releases/download/v1.14.3/01-iosevka-1.14.3.zip
     dest: /tmp/iosevka/
 
 - name: Copy the TTF Iosevka files into our fonts directory
