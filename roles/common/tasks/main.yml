@@ -28,9 +28,6 @@
 - name: Install WordPress Desktop
   shell: snap install wordpress-desktop
 
-- name: Zsh stuff
-  import_tasks: zsh.yml
-
 - name: Krita installation
   import_tasks: krita.yml
 

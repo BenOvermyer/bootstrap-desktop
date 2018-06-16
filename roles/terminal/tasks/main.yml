@@ -1,0 +1,6 @@
+---
+- name: Hyper.js installation
+  import_tasks: hyper.yml
+  
+- name: Zsh stuff
+  import_tasks: zsh.yml
