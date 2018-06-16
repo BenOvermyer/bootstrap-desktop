@@ -1,0 +1,4 @@
+---
+- name: Spotify installation
+  import_tasks: spotify.yml
+  

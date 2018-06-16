@@ -1,0 +1,21 @@
+---
+- name: Create temp Iosevka directory
+  file:
+    path: /tmp/iosevka/
+    state: directory
+
+- name: Download Iosevka
+  unarchive:
+    url: https://github.com/be5invis/Iosevka/releases/download/v1.14.3/01-iosevka-1.14.3.zip
+    dest: /tmp/iosevka/
+
+- name: Copy the TTF Iosevka files into our fonts directory
+  shell: cp /tmp/iosevka/ttf/*.ttf /usr/local/share/fonts/
+
+- name: Clean up
+  file:
+    path: /tmp/iosevka/
+    state: absent
+
+- name: Reload fonts
+  shell: fc-cache

@@ -5,3 +5,4 @@
   roles:
     - { role: common, tags: common }
     - { role: development, tags: development }
+    - { role: entertainment, tags: entertainment }

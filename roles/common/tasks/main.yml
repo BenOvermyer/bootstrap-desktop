@@ -1,4 +1,8 @@
 ---
+- name: Update the apt cache
+  apt:
+    update_cache: True
+
 - name: Install common stuff
   apt:
     name: "{{ item }}"
@@ -7,3 +11,38 @@
     - apt-transport-https
     - ca-certificates
     - curl
+    - zsh
+
+- name: Install fonts
+  import_tasks: fonts.yml
+
+- name: Install Bitwarden
+  shell: snap install bitwarden
+
+- name: Chrome installation
+  import_tasks: chrome.yml
+
+- name: Install Slack
+  shell: snap install slack
+
+- name: Install WordPress Desktop
+  shell: snap install wordpress-desktop
+
+- name: Zsh stuff
+  import_tasks: zsh.yml
+
+- name: Krita installation
+  import_tasks: krita.yml
+
+- name: Dropbox installation
+  import_tasks: dropbox.yml
+
+- name: Install Discord
+  shell: snap install discord
+
+- name: Create Source directory
+  file:
+    path: /home/ben/Source
+    state: directory
+    owner: ben
+    group: ben

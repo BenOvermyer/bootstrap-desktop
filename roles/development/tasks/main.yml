@@ -7,3 +7,9 @@
 
 - name: Node.js
   import_tasks: nodejs.yml
+
+- name: PHP
+  import_tasks: php.yml
+
+- name: Go
+  import_tasks: go.yml

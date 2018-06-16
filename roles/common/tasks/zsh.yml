@@ -1,0 +1,28 @@
+---
+- name: Make zsh my default shell
+  become_user: ben
+  become: False
+  shell: "chsh -s $(which zsh)"
+
+- name: Run the Oh-My-Zsh installer
+  become_user: ben
+  become: False
+  shell: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+- name: Set the theme to pygmalion
+  lineinfile:
+    file: /home/ben/.zshrc
+    regexp: '^ZSH_THEME='
+    line: 'ZSH_THEME="pygmalion"'
+
+- name: Add my aliases file
+  template:
+    src: zsh-aliases.j2
+    dest: /home/ben/.zshrc-aliases
+    owner: ben
+    group: ben
+
+- name: Add inclusion of aliases file to zshrc
+  lineinfile:
+    file: /home/ben/.zshrc
+    line: 'source .zshrc-aliases'

@@ -1,0 +1,38 @@
+---
+- name: Add PHP repository
+  apt_repository:
+    repo: ppa:ondrej/php
+    state: present
+
+- name: Update cache
+  apt:
+    update_cache: True
+
+- name: Install PHP
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "php{{ php_version }}-fpm"
+    - "php{{ php_version }}-cli"
+    - "php{{ php_version }}-intl"
+    - "php{{ php_version }}-json"
+    - "php{{ php_version }}-mcrypt"
+    - "php{{ php_version }}-mysql"
+    - "php{{ php_version }}-xml"
+    - "php{{ php_version }}-zip"
+
+- name: Fetch Composer
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: /tmp/composer-installer
+
+- name: Run Composer installer
+  shell: php composer-installer
+  args:
+    chdir: /tmp/
+
+- name: Move Composer binary to a global location
+  shell: mv composer.phar /usr/local/bin/composer
+  args:
+    chdir: /tmp/

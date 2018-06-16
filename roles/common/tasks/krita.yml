@@ -1,0 +1,11 @@
+---
+- name: Add Krita repository
+  apt_repository:
+    repo: ppa:kritalime/ppa
+    state: present
+
+- name: Install Krita
+  apt:
+    name: krita
+    state: present
+    update_cache: True

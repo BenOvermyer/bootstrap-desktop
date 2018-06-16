@@ -25,4 +25,7 @@
     name: neovim
     state: present
     update_cache: True
+
+- name: Install PHPStorm
+  shell: snap install phpstorm
     

@@ -1,0 +1,16 @@
+---
+- name: Fetch Hyper package
+  get_url:
+    url: https://releases.hyper.is/download/deb
+    dest: /tmp/hyper.deb
+
+- name: Install Hyper
+  apt:
+    deb: /tmp/hyper.deb
+
+- name: Configure Hyper for me
+  template:
+    src: hyper.j2
+    dest: /home/ben/.hyper.js
+    owner: ben
+    group: ben
