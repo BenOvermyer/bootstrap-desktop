@@ -21,4 +21,4 @@
 - name: Add inclusion of aliases file to zshrc
   lineinfile:
     path: /home/ben/.zshrc
-    line: 'source .zshrc-aliases'
+    line: 'source ~/.zshrc-aliases'
