@@ -1,3 +1,5 @@
 ---
 hyper_font_family: 'Iosevka, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace'
 hyper_font_size: 18
+install_dropbox: False
+install_krita: False

@@ -1,0 +1,8 @@
+---
+- name: Install Chrome
+  import_tasks: chrome.yml
+  when: install_chrome
+
+- name: Install Firefox
+  import_tasks: firefox.yml
+  when: install_firefox

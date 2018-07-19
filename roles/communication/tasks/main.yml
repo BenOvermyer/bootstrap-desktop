@@ -1,0 +1,8 @@
+---
+- name: Install Slack
+  shell: snap install slack --classic
+  when: install_slack
+
+- name: Install Discord
+  shell: snap install discord
+  when: install_discord
