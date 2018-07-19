@@ -1,3 +1,0 @@
----
-- name: Install Spotify
-  shell: snap install spotify --classic

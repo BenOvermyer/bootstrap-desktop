@@ -1,4 +1,6 @@
 ---
-- name: Spotify installation
-  import_tasks: spotify.yml
-  
+- name: Install Spotify
+  shell: snap install spotify --classic
+
+- name: Install VLC
+  shell: snap install vlc
