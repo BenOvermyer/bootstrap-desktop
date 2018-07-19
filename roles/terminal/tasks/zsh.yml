@@ -1,6 +1,8 @@
 ---
 - name: Make zsh my default shell
-  shell: "chsh -s $(which zsh)"
+  user:
+    name: ben
+    shell: /usr/bin/zsh
 
 - name: Run the Oh-My-Zsh installer
   shell: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
