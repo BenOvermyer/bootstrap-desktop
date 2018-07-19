@@ -1,6 +1,8 @@
 ---
 - name: Hyper.js installation
   import_tasks: hyper.yml
-  
+  when: install_hyper
+
 - name: Zsh stuff
+  become_user: ben
   import_tasks: zsh.yml
