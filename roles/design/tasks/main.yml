@@ -1,0 +1,16 @@
+---
+- name: Install Krita
+  import_tasks: krita.yml
+  when: install_krita
+
+- name: Install Inkscape
+  apt:
+    name: inkscape
+    state: present
+  when: install_inkscape
+
+- name: Install Scribus
+  apt:
+    name: scribus
+    state: present
+  when: install_scribus

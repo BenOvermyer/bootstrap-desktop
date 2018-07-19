@@ -1,4 +1,11 @@
 ---
+- name: Create Source directory
+  file:
+    path: /home/ben/Source
+    state: directory
+    owner: ben
+    group: ben
+    
 - name: Docker
   import_tasks: docker.yml
 

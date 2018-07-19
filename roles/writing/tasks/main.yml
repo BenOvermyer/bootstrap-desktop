@@ -1,0 +1,4 @@
+---
+- name: Install WordPress Desktop
+  shell: snap install wordpress-desktop
+  when: install_wordpress_desktop

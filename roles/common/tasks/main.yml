@@ -19,20 +19,6 @@
 - name: Install Bitwarden
   shell: snap install bitwarden
 
-- name: Install WordPress Desktop
-  shell: snap install wordpress-desktop
-
-- name: Krita installation
-  import_tasks: krita.yml
-  when: install_krita
-
 - name: Dropbox installation
   import_tasks: dropbox.yml
   when: install_dropbox
-
-- name: Create Source directory
-  file:
-    path: /home/ben/Source
-    state: directory
-    owner: ben
-    group: ben

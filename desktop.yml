@@ -7,5 +7,7 @@
     - { role: browser, tags: browser }
     - { role: terminal, tags: terminal }
     - { role: communication, tags: communication }
+    - { role: design, tags: design }
     - { role: development, tags: development }
     - { role: entertainment, tags: entertainment }
+    - { role: writing, tags: writing }
