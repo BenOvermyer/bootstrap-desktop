@@ -27,5 +27,5 @@
     update_cache: True
 
 - name: Install PHPStorm
-  shell: snap install phpstorm
+  shell: snap install phpstorm --classic
     
