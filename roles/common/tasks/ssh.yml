@@ -1,0 +1,6 @@
+---
+- name: Generate SSH key
+  user:
+    name: ben
+    generate_ssh_key: True
+    

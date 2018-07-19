@@ -22,3 +22,6 @@
 - name: Dropbox installation
   import_tasks: dropbox.yml
   when: install_dropbox
+
+- name: Do SSH tasks
+  import_tasks: ssh.yml
