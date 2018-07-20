@@ -6,3 +6,7 @@
 - name: Install Discord
   shell: snap install discord
   when: install_discord
+
+- name: Install Wire
+  import_tasks: wire.yml
+  when: install_wire

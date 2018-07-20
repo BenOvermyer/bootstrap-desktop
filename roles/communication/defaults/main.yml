@@ -1,3 +1,4 @@
 ---
 install_discord: False
 install_slack: True
+install_wire: True

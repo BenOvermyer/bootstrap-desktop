@@ -1,0 +1,16 @@
+---
+- name: Add Wire apt key
+  apt_key:
+    url: https://wire-app.wire.com/linux/releases.key
+    state: present
+
+- name: Add Wire apt repository
+  apt_repository:
+    repo: deb https://wire-app.wire.com/linux/debian stable main
+    state: present
+
+- name: Install Wire
+  apt:
+    name: wire-desktop
+    state: latest
+    update_cache: True
