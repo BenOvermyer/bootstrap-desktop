@@ -8,6 +8,7 @@
     
 - name: Docker
   import_tasks: docker.yml
+  tags: docker
 
 - name: IDEs
   import_tasks: ide.yml

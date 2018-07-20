@@ -19,3 +19,14 @@
   apt:
     name: docker-compose
     state: present
+
+- name: Create a group for docker
+  group:
+    name: docker
+    state: present
+
+- name: Add my user to the docker group
+  user:
+    name: ben
+    append: True
+    groups: docker
