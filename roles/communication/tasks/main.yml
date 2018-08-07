@@ -1,11 +1,15 @@
 ---
-- name: Install Slack
-  shell: snap install slack --classic
-  when: install_slack
-
 - name: Install Discord
   shell: snap install discord
   when: install_discord
+
+- name: Install Pidgin
+  import_tasks: pidgin.yml
+  when: install_pidgin
+
+- name: Install Slack
+  shell: snap install slack --classic
+  when: install_slack
 
 - name: Install Wire
   import_tasks: wire.yml

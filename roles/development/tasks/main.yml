@@ -1,11 +1,11 @@
 ---
 - name: Create Source directory
   file:
-    path: /home/ben/Source
+    path: "/home/{{ primary_user }}/Source"
     state: directory
-    owner: ben
-    group: ben
-    
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"
+
 - name: Docker
   import_tasks: docker.yml
   tags: docker

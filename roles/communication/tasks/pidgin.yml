@@ -1,0 +1,10 @@
+---
+- name: Install Pidgin
+  apt:
+    name: pidgin
+    state: present
+
+- name: Install Pidgin SIPE plugin
+  apt:
+    name: pidgin-sipe
+    state: present

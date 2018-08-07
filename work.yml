@@ -3,16 +3,16 @@
   connection: local
   become: True
   vars:
-    install_discord: True
-    install_focuswriter: True
-    primary_user: ben
+    install_chefdk: True
+    install_discord: False
+    install_pidgin: True
+    install_wire: False
+    install_vivaldi: True
+    primary_user: ben.overmyer
   roles:
     - { role: common, tags: common }
     - { role: browser, tags: browser }
     - { role: terminal, tags: terminal }
     - { role: communication, tags: communication }
-    - { role: design, tags: design }
     - { role: development, tags: development }
     - { role: devops, tags: devops }
-    - { role: entertainment, tags: entertainment }
-    - { role: writing, tags: writing }

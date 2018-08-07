@@ -1,0 +1,16 @@
+---
+- name: Add Focuswriter repo
+  apt_repository:
+    repo: deb http://download.opensuse.org/repositories/home:/gottcode/xUbuntu_18.04/ /
+    state: present
+
+- name: Add Focuswriter apt key
+  apt_key:
+    url: https://download.opensuse.org/repositories/home:gottcode/xUbuntu_18.04/Release.key
+    state: present
+
+- name: Install Focuswriter
+  apt:
+    name: focuswriter
+    state: present
+    update_cache: True

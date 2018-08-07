@@ -4,5 +4,5 @@
   when: install_hyper
 
 - name: Zsh stuff
-  become_user: ben
+  become_user: "{{ primary_user }}"
   import_tasks: zsh.yml

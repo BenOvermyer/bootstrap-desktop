@@ -1,7 +1,7 @@
 ---
 - name: Make zsh my default shell
   user:
-    name: ben
+    name: "{{ primary_user }}"
     shell: /usr/bin/zsh
 
 - name: Run the Oh-My-Zsh installer
@@ -9,18 +9,18 @@
 
 - name: Set the theme to pygmalion
   lineinfile:
-    path: /home/ben/.zshrc
+    path: "/home/{{ primary_user }}/.zshrc"
     regexp: '^ZSH_THEME='
     line: 'ZSH_THEME="pygmalion"'
 
 - name: Add my aliases file
   template:
     src: zsh-aliases.j2
-    dest: /home/ben/.zshrc-aliases
-    owner: ben
-    group: ben
+    dest: "/home/{{ primary_user }}/.zshrc-aliases"
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"
 
 - name: Add inclusion of aliases file to zshrc
   lineinfile:
-    path: /home/ben/.zshrc
+    path: "/home/{{ primary_user }}/.zshrc"
     line: 'source ~/.zshrc-aliases'

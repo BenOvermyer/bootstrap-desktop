@@ -1,4 +1,5 @@
 ---
 install_discord: False
+install_pidgin: False
 install_slack: True
-install_wire: True
+install_wire: False

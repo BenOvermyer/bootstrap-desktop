@@ -11,6 +11,6 @@
 - name: Configure Hyper for me
   template:
     src: hyper.j2
-    dest: /home/ben/.hyper.js
-    owner: ben
-    group: ben
+    dest: "/home/{{ primary_user }}/.hyper.js"
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"

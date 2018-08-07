@@ -1,6 +1,6 @@
 ---
 - name: Download Go
-  unarchive: 
+  unarchive:
     remote_src: True
     src: https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
     dest: /usr/local/
@@ -13,7 +13,7 @@
 
 - name: Create workspace directory
   file:
-    path: /home/ben/go
+    path: "/home/{{ primary_user }}/go"
     state: directory
-    owner: ben
-    group: ben
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"

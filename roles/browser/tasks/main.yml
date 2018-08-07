@@ -6,3 +6,7 @@
 - name: Install Firefox
   import_tasks: firefox.yml
   when: install_firefox
+
+- name: Install Vivaldi
+  import_tasks: vivaldi.yml
+  when: install_vivaldi

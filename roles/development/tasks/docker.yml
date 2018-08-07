@@ -27,6 +27,6 @@
 
 - name: Add my user to the docker group
   user:
-    name: ben
+    name: "{{ primary_user }}"
     append: True
     groups: docker

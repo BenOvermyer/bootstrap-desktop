@@ -2,3 +2,10 @@
 - name: Install WordPress Desktop
   shell: snap install wordpress-desktop
   when: install_wordpress_desktop
+
+- name: Install Pandoc
+  import_tasks: pandoc.yml
+
+- name: Install Focuswriter
+  import_tasks: focuswriter.yml
+  when: install_focuswriter
