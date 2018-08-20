@@ -13,6 +13,10 @@
     - curl
     - zsh
 
+- name: Install Flatpak
+  import_tasks: flatpak.yml
+  tags: flatpak
+
 - name: Install fonts
   import_tasks: fonts.yml
 

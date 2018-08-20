@@ -1,0 +1,19 @@
+---
+- name: Add the Flatpak apt repository
+  apt_repository:
+    repo: ppa:alexlarsson/flatpak
+    state: present
+
+- name: Install Flatpak
+  apt:
+    name: flatpak
+    state: latest
+    update_cache: True
+
+- name: Install the Gnome Software Flatpak plugin
+  apt:
+    name: gnome-software-plugin-flatpak
+    state: latest
+
+- name: Enable Flathub
+  shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
