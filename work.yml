@@ -5,6 +5,7 @@
   vars:
     install_chefdk: True
     install_discord: False
+    install_firefox: False
     install_pidgin: True
     install_wire: False
     install_vivaldi: True

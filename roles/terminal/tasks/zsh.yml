@@ -5,6 +5,7 @@
     shell: /usr/bin/zsh
 
 - name: Run the Oh-My-Zsh installer
+  become_user: "{{ primary_user }}"
   shell: sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 - name: Set the theme to pygmalion

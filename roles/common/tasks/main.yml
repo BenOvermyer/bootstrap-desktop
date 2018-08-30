@@ -11,6 +11,7 @@
     - apt-transport-https
     - ca-certificates
     - curl
+    - vim
     - zsh
 
 - name: Install Flatpak
