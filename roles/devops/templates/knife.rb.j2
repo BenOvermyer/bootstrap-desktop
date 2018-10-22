@@ -1,0 +1,17 @@
+# See http://docs.chef.io/config_rb_knife.html for more information on knife configuration options
+
+current_dir = File.dirname(__FILE__)
+log_level                :info
+log_location             STDOUT
+node_name                "{{ chef_node_name }}"
+client_key               "{{ chef_client_key }}"
+chef_server_url          "{{ chef_server_url }}"
+cookbook_path            ["{{ chef_cookbook_path }}"]
+ssl_ca_file              {{ chef_ssl_ca_file }}
+trusted_certs_dir        {{ chef_trusted_certs_dir }}
+cookbook_copyright       "{{ chef_cookbook_copyright }}"
+cookbook_license         "{{ chef_cookbook_license }}"
+cookbook_email           "{{ chef_cookbook_email }}"
+supermarket_site         '{{ chef_supermarket_site }}'
+editor                   '{{ chef_editor }}'
+sort_reverse

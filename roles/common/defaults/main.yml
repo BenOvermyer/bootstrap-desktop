@@ -1,4 +1,10 @@
 ---
+common_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - vim
+  - zsh
 hyper_font_family: 'Iosevka, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace'
 hyper_font_size: 18
 install_dropbox: False

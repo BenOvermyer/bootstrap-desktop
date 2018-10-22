@@ -3,13 +3,14 @@
   connection: local
   become: True
   vars:
-    install_chefdk: True
+    install_chef: True
+    install_chrome: True
     install_discord: False
     install_firefox: False
     install_pidgin: True
-    install_wire: False
-    install_vivaldi: True
-    primary_user: ben.overmyer
+    primary_user: ben
+  vars_files:
+    - vars/protolabs.yml
   roles:
     - { role: common, tags: common }
     - { role: browser, tags: browser }

@@ -1,0 +1,23 @@
+---
+- name: Check to see if Chef Workstation is already installed
+  command: which chef
+  register: chef_check
+
+- name: Install Chef Workstation
+  apt:
+    deb: https://packages.chef.io/files/stable/chef-workstation/0.2.21/ubuntu/18.04/chef-workstation_0.2.21-1_amd64.deb
+  when: chef_check.stdout == ""
+
+- name: Create .chef directory
+  file:
+    path: "/home/{{ primary_user }}/.chef"
+    state: directory
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"
+
+- name: Place knife configuration file
+  template:
+    src: knife.rb.j2
+    dest: "/home/{{ primary_user }}/.chef/knife.rb"
+    owner: "{{ primary_user }}"
+    group: "{{ primary_user }}"

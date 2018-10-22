@@ -1,2 +1,14 @@
 ---
-install_chefdk: False
+install_chef: False
+
+chef_node_name: node1
+chef_client_key: client.pem
+chef_server_url: https://example.com
+chef_cookbook_path: cookbooks
+chef_ssl_ca_file: sslca.crt
+chef_trusted_certs_dir: trusted_certs
+chef_cookbook_copyright: Company, Inc.
+chef_cookbook_license: "all_rights"
+chef_cookbook_email: company@company.com
+chef_supermarket_site: "https://supermarket.chef.io"
+chef_editor: "vim"

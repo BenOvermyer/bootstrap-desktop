@@ -1,0 +1,12 @@
+---
+chef_node_name: benovermyer
+chef_client_key: "#{current_dir}/benovermyer.pem"
+chef_server_url: https://chef-server.prlb.io/organizations/protolabs
+chef_cookbook_path: "#{current_dir}/chef_protolabs/cookbooks"
+chef_ssl_ca_file: "File.join(current_dir, 'ca_certs', 'ProtoLabsRootCA.crt')"
+chef_trusted_certs_dir: "File.join(current_dir, 'trusted_certs')"
+chef_cookbook_copyright: "Proto Labs, Inc."
+chef_cookbook_license: "all_rights"
+chef_cookbook_email: "gts-devops@protolabs.com"
+chef_supermarket_site: "https://chef-supermarket.prlb.io"
+chef_editor: "vim"

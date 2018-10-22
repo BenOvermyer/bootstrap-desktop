@@ -10,18 +10,8 @@
 
 - name: Install PHP
   apt:
-    name: "{{ item }}"
+    name: "{{ php_packages }}"
     state: present
-  with_items:
-    - "php{{ php_version }}-fpm"
-    - "php{{ php_version }}-cli"
-    - "php{{ php_version }}-intl"
-    - "php{{ php_version }}-json"
-    - "php{{ php_version }}-mbstring"
-    - "php{{ php_version }}-mcrypt"
-    - "php{{ php_version }}-mysql"
-    - "php{{ php_version }}-xml"
-    - "php{{ php_version }}-zip"
 
 - name: Fetch Composer
   get_url:

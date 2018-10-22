@@ -4,7 +4,6 @@
   become: True
   vars:
     install_discord: True
-    install_focuswriter: True
     primary_user: ben
   roles:
     - { role: common, tags: common }
