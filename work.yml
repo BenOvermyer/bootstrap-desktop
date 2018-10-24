@@ -8,7 +8,7 @@
     install_discord: False
     install_firefox: False
     install_pidgin: True
-    primary_user: ben
+    primary_user: ben.overmyer
   vars_files:
     - vars/protolabs.yml
   roles:
