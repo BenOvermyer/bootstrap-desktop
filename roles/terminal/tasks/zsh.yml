@@ -19,7 +19,7 @@
     src: zsh-aliases.j2
     dest: "/home/{{ primary_user }}/.zshrc-aliases"
     owner: "{{ primary_user }}"
-    group: "{{ primary_user }}"
+    group: "{{ primary_user_group }}"
 
 - name: Add inclusion of aliases file to zshrc
   lineinfile:

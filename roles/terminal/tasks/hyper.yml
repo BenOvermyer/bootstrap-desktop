@@ -13,4 +13,4 @@
     src: hyper.j2
     dest: "/home/{{ primary_user }}/.hyper.js"
     owner: "{{ primary_user }}"
-    group: "{{ primary_user }}"
+    group: "{{ primary_user_group }}"

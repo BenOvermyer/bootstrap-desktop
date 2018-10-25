@@ -16,4 +16,4 @@
     path: "/home/{{ primary_user }}/go"
     state: directory
     owner: "{{ primary_user }}"
-    group: "{{ primary_user }}"
+    group: "{{ primary_user_group }}"

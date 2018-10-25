@@ -13,11 +13,11 @@
     path: "/home/{{ primary_user }}/.chef"
     state: directory
     owner: "{{ primary_user }}"
-    group: "{{ primary_user }}"
+    group: "{{ primary_user_group }}"
 
 - name: Place knife configuration file
   template:
     src: knife.rb.j2
     dest: "/home/{{ primary_user }}/.chef/knife.rb"
     owner: "{{ primary_user }}"
-    group: "{{ primary_user }}"
+    group: "{{ primary_user_group }}"

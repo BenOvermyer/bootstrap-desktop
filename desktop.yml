@@ -5,6 +5,7 @@
   vars:
     install_discord: True
     primary_user: ben
+    primary_user_group: ben
   roles:
     - { role: common, tags: common }
     - { role: browser, tags: browser }
