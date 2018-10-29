@@ -10,8 +10,6 @@
     install_pidgin: True
     primary_user: ben.overmyer
     primary_user_group: "domain users"
-  vars_files:
-    - vars/protolabs.yml
   roles:
     - { role: common, tags: common }
     - { role: browser, tags: browser }
