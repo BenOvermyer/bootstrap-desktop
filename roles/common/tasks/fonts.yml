@@ -7,7 +7,7 @@
 - name: Download Iosevka
   unarchive:
     remote_src: True
-    src: https://github.com/be5invis/Iosevka/releases/download/v1.14.3/01-iosevka-1.14.3.zip
+    src: https://github.com/be5invis/Iosevka/releases/download/v3.0.0-rc.7/01-iosevka-3.0.0-rc.7.zip
     dest: /tmp/iosevka/
 
 - name: Copy the TTF Iosevka files into our fonts directory
@@ -16,6 +16,25 @@
 - name: Clean up
   file:
     path: /tmp/iosevka/
+    state: absent
+
+- name: Create temp Fira Code directory
+  file:
+    path: /tmp/firacode
+    state: directory
+
+- name: Download Fira Code
+  unarchive:
+    remote_src: True
+    src: https://github.com/tonsky/FiraCode/releases/download/3.1/FiraCode_3.1.zip
+    dest: /tmp/firacode
+
+- name: Copy the TTF Fira Code files into our fonts directory
+  shell: cp /tmp/firacode/ttf/*.ttf /usr/local/share/fonts/
+
+- name: Clean up
+  file:
+    path: /tmp/firacode/
     state: absent
 
 - name: Reload fonts

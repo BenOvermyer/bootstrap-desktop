@@ -3,3 +3,5 @@
   user:
     name: "{{ primary_user }}"
     generate_ssh_key: True
+    ssh_key_bits: 521
+    ssh_key_type: ecdsa

@@ -11,7 +11,7 @@
 - name: Set the theme to pygmalion
   lineinfile:
     path: "/home/{{ primary_user }}/.zshrc"
-    regexp: '^ZSH_THEME='
+    regexp: "^ZSH_THEME="
     line: 'ZSH_THEME="pygmalion"'
 
 - name: Add my aliases file
@@ -24,4 +24,4 @@
 - name: Add inclusion of aliases file to zshrc
   lineinfile:
     path: "/home/{{ primary_user }}/.zshrc"
-    line: 'source ~/.zshrc-aliases'
+    line: "source ~/.zshrc-aliases"

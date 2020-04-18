@@ -1,19 +1,8 @@
 ---
-- name: Install VS Code key
-  apt_key:
-    url: 'https://packages.microsoft.com/keys/microsoft.asc'
-    state: present
-
-- name: Install VS Code repo
-  apt_repository:
-    repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
-    state: present
-
-- name: Install VS Code
-  apt:
+- name: Install Visual Studio Code
+  snap:
     name: code
-    state: present
-    update_cache: True
+    classic: True
 
 - name: Add neovim apt repository
   apt_repository:
@@ -25,7 +14,3 @@
     name: neovim
     state: present
     update_cache: True
-
-- name: Install PHPStorm
-  shell: snap install phpstorm --classic
-    
